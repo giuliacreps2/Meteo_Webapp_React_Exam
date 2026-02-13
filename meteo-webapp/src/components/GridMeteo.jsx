@@ -4,9 +4,9 @@ import Col from "react-bootstrap/Col";
 import MeteoCard from "./MeteoCard";
 import { useEffect, useState } from "react";
 
-const GridMeteo = function ({ cittàExtra }) {
+const GridMeteo = function () {
   const arrayCittàStandard = ["Firenze", "London", "New York", "Beijing", "Cortina d'Ampezzo", "Madrid"];
-  const tuttiIDati = [...meteoData, ...cittàExtra];
+
   const [meteoData, setMeteoData] = useState([]);
 
   const API_KEY = "bc45c3a9cab5095ab402b5746a08d45e";

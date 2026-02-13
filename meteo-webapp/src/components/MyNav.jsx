@@ -1,20 +1,20 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import Row from "react-bootstrap/esm/Row";
+import Col from "react-bootstrap/esm/Col";
+import { Link } from "react-router-dom";
 
 function MyNav() {
   return (
     <Navbar className="navbar navbar-expand-lg bg-body-tertiary">
       <Container fluid>
-        <Navbar.Brand href="#">Meteo</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
+        <Col></Col>
+        <Col xs={10} className="text-center">
+          <Link to={`/`} style={{ textDecoration: "none", color: "navy", fontWeight: "bold" }}>
+            METEON
+          </Link>
+        </Col>
+        <Col></Col>
       </Container>
     </Navbar>
   );
