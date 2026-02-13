@@ -1,4 +1,4 @@
-:root {
+/*:root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -65,4 +65,105 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}*/
+
+.custom-sunny-card {
+  border: 2px solid #007bff; /* Bordo personalizzato */
+  border-radius: 15px; /* Angoli più arrotondati */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* Ombra */
+  transition: transform 0.3s; /* Animazione */
+  /*background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);*/
+  background-image: linear-gradient(120deg, #66a6ffcc 0%, #91eff6e4 80%);
+}
+
+.custom-sunny-card-title {
+  color: #2c3e50;
+  font-weight: medium !important;
+  font-size: 2rem !important;
+  margin-bottom: 10px;
+}
+
+.custom-sunny-card-h2 {
+  color: #2c3e50;
+  font-weight: bold !important;
+  font-size: 3.2rem !important;
+  margin-bottom: 10px;
+}
+
+.custom-sunny-card-text {
+  color: #2c3e50;
+  font-weight: medium !important;
+  font-size: 1rem !important;
+  margin-bottom: 10px;
+}
+
+.custom-sunny-card:hover {
+  transform: translateY(-5px); /* Effetto hover */
+}
+
+.custom-cloudy-card {
+  border: 2px solid #007bff; /* Bordo personalizzato */
+  border-radius: 15px; /* Angoli più arrotondati */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* Ombra */
+  transition: transform 0.3s; /* Animazione */
+  background: linear-gradient(-180deg, #bcc5ce 0%, #929ead 98%), radial-gradient(at top left, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
+  background-blend-mode: screen;
+}
+
+.custom-cloudy-card-title {
+  color: #2c3e50;
+  font-weight: medium !important;
+  font-size: 2rem !important;
+  margin-bottom: 10px;
+}
+
+.custom-cloudy-card-h2 {
+  color: #2c3e50;
+  font-weight: bold !important;
+  font-size: 3.2rem !important;
+  margin-bottom: 10px;
+}
+
+.custom-sunny-card-text {
+  color: #2c3e50;
+  font-weight: medium !important;
+  font-size: 1rem !important;
+  margin-bottom: 10px;
+}
+
+.custom-cloudy-card:hover {
+  transform: translateY(-5px); /* Effetto hover */
+}
+
+.custom-stormy-card {
+  border: 2px solid #007bff; /* Bordo personalizzato */
+  border-radius: 15px; /* Angoli più arrotondati */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* Ombra */
+  transition: transform 0.3s; /* Animazione */
+  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+}
+
+.custom-stormy-card-title {
+  color: whitesmoke !important;
+  font-weight: medium !important;
+  font-size: 2rem !important;
+  margin-bottom: 10px;
+}
+
+.custom-stormy-card-h2 {
+  color: whitesmoke !important;
+  font-weight: bold !important;
+  font-size: 3.2rem !important;
+  margin-bottom: 10px;
+}
+
+.custom-stormy-card-text {
+  color: whitesmoke !important;
+  font-weight: medium !important;
+  font-size: 1rem !important;
+  margin-bottom: 10px;
+}
+
+.custom-stormy-card:hover {
+  transform: translateY(-5px); /* Effetto hover */
 }
