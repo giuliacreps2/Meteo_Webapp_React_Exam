@@ -4,26 +4,21 @@ import Col from "react-bootstrap/Col";
 import MeteoCard from "./MeteoCard";
 import { useEffect, useState } from "react";
 
-const GridMeteo = function ({ cittàExtra }) {
-  const arrayCittàStandard = ["Firenze", "London", "New York", "Beijing", "Cortina d'Ampezzo", "Madrid"];
-  const tuttiIDati = [...meteoData, ...cittàExtra];
+const GridCardMeteoDaily = function ({ cittàExtra }) {
   const [meteoData, setMeteoData] = useState([]);
 
   const API_KEY = "bc45c3a9cab5095ab402b5746a08d45e";
-  const urlAPI = "https://api.openweathermap.org/data/2.5/weather";
+  const urlAPI2 = "https://api.openweathermap.org/data/2.5/forecast";
 
   const getMeteoData = () => {
-    const requests = arrayCittàStandard.map((città) =>
-      fetch(`${urlAPI}?q=${città}&appid=${API_KEY}&units=metric&lang=it`).then((Response) => {
+    fetch(`${urlAPI2}?q=${cittàExtra}&appid=${API_KEY}&units=metric&lang=it`)
+      .then((Response) => {
         if (Response.ok) {
           return Response.json();
         } else {
           throw new Error("Errore nel caricamento dei dati");
         }
-      }),
-    );
-
-    Promise.all(requests)
+      })
       .then((data) => {
         console.log(data);
         setMeteoData(data);
@@ -35,14 +30,14 @@ const GridMeteo = function ({ cittàExtra }) {
 
   useEffect(() => {
     getMeteoData();
-  }, []);
+  }, [`${cittàExtra}`]);
 
   return (
     <Container fluid>
       <Row className="mt-3">
-        {meteoData.map((città) => (
-          <Col xs={12} md={4} className="mt-3" key={città.id}>
-            <MeteoCard meteo={città}></MeteoCard>
+        {meteoData.map((cittàextra) => (
+          <Col xs={12} md={4} className="mt-3" key={cittàextra.id}>
+            <MeteoCard meteo={cittàextra}></MeteoCard>
           </Col>
         ))}
       </Row>
@@ -50,4 +45,4 @@ const GridMeteo = function ({ cittàExtra }) {
   );
 };
 
-export default GridMeteo;
+export default GridCardMeteoDaily;

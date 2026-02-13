@@ -98,10 +98,10 @@ button:focus-visible {
 }
 
 .custom-cloudy-card {
-  border: 2px solid #007bff; /* Bordo personalizzato */
-  border-radius: 15px; /* Angoli più arrotondati */
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* Ombra */
-  transition: transform 0.3s; /* Animazione */
+  border: 2px solid #007bff;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
   background: linear-gradient(-180deg, #bcc5ce 0%, #929ead 98%), radial-gradient(at top left, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%) !important;
   background-blend-mode: screen !important;
 }
@@ -183,4 +183,22 @@ button:focus-visible {
   font-weight: medium !important;
   font-size: 1rem !important;
   margin-bottom: 10px;
+}
+
+.custom-sunny-card-container {
+  background: linear-gradient(-180deg, #bcc5ce 0%, #929ead 98%), radial-gradient(at top left, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%) !important;
+  background-blend-mode: screen !important;
+}
+
+.custom-cloudy-card-container {
+  background: linear-gradient(-180deg, #bcc5ce 0%, #929ead 98%), radial-gradient(at top left, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%) !important;
+  background-blend-mode: screen !important;
+}
+
+.custom-stormy-card-container {
+  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%) !important;
+}
+
+.custom-snowy-card-container {
+  background-image: linear-gradient(to top, #dfe9f3 0%, white 100%) !important;
 }
